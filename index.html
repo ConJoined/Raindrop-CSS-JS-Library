@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:700|Source+Sans+Pro:300');
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+.duluth-a {
+	background-image: url('http://builders.x10host.com/duluth-pictures/1346.jpg');
+    background-repeat: no-repeat;
+}
+.blur {
+	-webkit-filter: blur(1px);filter: blur(1px);
+}
+.dark-background {
+	color: white;
+}
+div.container {
+	margin: auto;
+}
+div.gloss {
+	background-color: grey;
+    width: 300px;
+    height: 200px;
+    margin: 5px;
+    color: white;
+    font-family: "Source Sans Pro", sans-serif;
+    padding: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+div.gloss.rounded {
+	border-radius: 15px;
+}
+div.gloss.red {
+	background: linear-gradient(to bottom right, #ff0000 0%, #800000 100%);
+}
+div.gloss.blue {
+	background: linear-gradient(to bottom right, #33ccff 0%, #0099ff 100%);
+}
+div.gloss.green {
+	background: linear-gradient(to bottom right, #00ffcc 0%, #009933 100%);
+}
+div.gloss.yellow {
+	background: linear-gradient(to bottom right, #ffcc00 0%, #cc6600 100%);
+}
+div.gloss.purple {
+	background: linear-gradient(to bottom right, #cc33ff 0%, #660066 100%)
+}
+p.desc {
+	display: block;
+    height: 70px;
+}
+div.tag {
+	background-color: grey;
+    width: 150px;
+    height: 75px;
+    margin: 20px;
+    color: white;
+    font-family: "Source Sans Pro", sans-serif;
+    padding: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+div.seperator {
+    height: 0px;
+    width: 400px;
+    height: 0px;
+    width: 100%;
+    border-bottom: 1px solid white;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.background {
+	height: 100%;
+    width: 100%;
+    margin: 0;
+    z-index: -1111111;
+    display: block;
+}
+@media (max-width: 1072px) { /* 1073 px is minimum for squared 3 */
+    div.gloss {
+    	width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+        display: block;
+    }
+}
+@media (max-width: 1072px) { /* 1073 px is minimum for squared 3 */
+    div.gloss {
+    	width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+        display: block;
+    }
+}
+@media (max-width: 768px) { /* 769 px is minimum for non-mobile mode */
+    div.mobile {
+    	display: block;
+    }
+    div.mobile.inline {
+    	display: inline;
+    }
+    div.mobile.inline.block {
+    	display: inline-block;
+    }
+    .desktop {
+    	display: none;
+    }
+}
+.overlay{
+    opacity:1;
+    background-color:#ffffff;
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+    z-index:1000;
+    transition: opacity 2s;
+}
+</style>
+</head>
+<body class="duluth-a dark-background">
+<div class="overlay" style="vertical-align:center;text-align:center;" id="waiting-lay">Hi!</div>
+<div>
+<h1 style="display:inline;float:left;">My Sample Grid</h1>
+<a style="display:inline;float:right;margin-right: 20px;text-decoration: none;color: white;" href="#" onclick="Fab()"><h1 style="">+</h1></a>
+</div>
+<br/>
+<br/>
+<br/>
+<br/>
+	<div style="margin:0 auto;">
+    <div class="gloss rounded red">
+    	<h2>Hi</h2>
+    	<p class="desc">Welcome!</p>
+    	<div class="seperator"></div><p>Me me big boy</p>
+    </div>
+    <div class="gloss rounded blue">
+    	<h2>Hi</h2>
+    	<p class="desc">Welcome!</p>
+    	<div class="seperator"></div><p>Me me big boy</p>
+    </div>
+    <div class="gloss rounded green">
+    	<h2>Hi</h2>
+    	<p class="desc">Welcome!</p>
+    	<div class="seperator"></div><p>Me me big boy</p>
+    </div>
+    <div class="gloss rounded yellow">
+    	<h2>Hi</h2>
+    	<p class="desc">Welcome!</p>
+    	<div class="seperator"></div><p>Me me big boy</p>
+    </div>
+    <div class="gloss rounded purple">
+    	<h2>Hi</h2>
+    	<p class="desc">Welcome!</p>
+    	<div class="seperator"></div><p>Me me big boy</p>
+    </div>
+    </div>
+    <script>
+    function BigBoi() {
+    	document.getElementById("waiting-lay").style.display = "none";
+    }
+    function MeMe() {
+    	document.getElementById("waiting-lay").style.opacity = 0;
+        setTimeout(BigBoi, 2000)
+    }
+    function Fab2() {
+    document.getElementById("waiting-lay").style.opacity = 1;
+    }
+    function Fab() {
+    	document.getElementById("waiting-lay").style.display = "block";
+        setTimeout(Fab2, 1)
+    	
+    }
+    setTimeout(MeMe, 500)
+    </script>
+</body>
+</html>
+
